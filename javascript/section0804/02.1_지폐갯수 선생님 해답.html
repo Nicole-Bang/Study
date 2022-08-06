@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">                  
+    <head>
+        <meta charset="UTF-8">                         
+        <title>02.1_지폐갯수 선생님 해답.html</title>  
+    </head> 
+    <body>
+        
+        <div id="demo"></div>
+
+        <script>
+            let money=54320;
+            //document.write(money/10000);
+            //document.write('<hr>');
+            //document.write(money%10000);
+
+            let m=parseInt(money/10000);
+            money=money%10000;             //money%=10000
+            let c=parseInt(money/1000);
+            money=money%1000; 
+            let b=parseInt(money/100);
+            money=money%100; 
+            let s=parseInt(money/10);
+
+
+            let result="";
+            result=result+"<table border='1'>";  //result+=""
+                result+="<tr>"
+                result+="   <th>만원</th>"
+                result+="   <td>"+m+"장</td>"
+                result+="</tr>"
+                result+="<tr>"
+                result+="   <th>천원</th>"
+                result+="   <td>"+c+"장</td>"
+                result+="</tr>"
+                result+="<tr>"
+                result+="   <th>백원</th>"
+                result+="   <td>"+b+"장</td>"
+                result+="</tr>"
+                result+="<tr>"
+                result+="   <th>십원</th>"
+                result+="   <td>"+s+"장</td>"
+                result+="</tr>"
+                result+="</table>"
+            
+
+            document.getElementById("demo").innerHTML=result;
+            
+        
+        </script>
+        
+    </body>                      
+</html>
