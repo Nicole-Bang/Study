@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">                  
     <head>
-        <meta charset="UTF-8">                         
         <title>06.1_제어문연습문제.html</title>  
     </head> 
     <body>
@@ -12,25 +11,26 @@
             //과제)3의 배수의 누적 합이 100이 넘어가려면 3부터 어디까지 더해야 하는지 구하시오
             //      3+6+9+12+15+18+21+24 = 108 > 100
             // 3+(3*1)+
+            
 
-            let hp=3;
-            let bae=0;
-            let sus=0;
-    
+            document.write("선생님이 푼 방법<br>")
+
+            let num=0;
+            let add=0; //누적의 합
+
 
             while(true){
-                sus=3*bae;
-                hp=hp+sus;
-                bae=bae+1;
+                num=num+3;   //3의 배수
+                add=add+num;
 
-                if(hp>100){ 
+                document.write(num + "&nbsp;&nbsp;"+ add);
+                document.write("<hr>")
+
+                if(add>=100){
                     break;
                 }
-            
-            }
-            
-            document.write("마지막 배수 : "+bae)
-            document.write("<hr>")
+                
+            }//while end
 
             
         
