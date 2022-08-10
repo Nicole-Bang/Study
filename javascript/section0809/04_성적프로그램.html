@@ -33,11 +33,13 @@
         // 학생 평균
         let aver=[];
         for(let i=0; i<size; i=i+1){
-            aver[i]=(kor[i]+eng[i]+mat[i])/3
+            aver[i]=(kor[i]+eng[i]+mat[i])/3;
         }//for end
 
-        document.write(aver);
-        document.write("<hr>")
+        // let aver=[];에서 값을 제대로 지정하지않아서 parseInt가 자꾸 에러가 생긴걸까?
+
+        //document.write(aver);
+        //document.write("<hr>")
 
 
         // 학생 등수
@@ -51,11 +53,13 @@
                 }//for end   
             }//for end
 
-            document.write("학생의 각 등수 : " + rank)
-            document.write("<hr>")
+           // document.write("학생의 각 등수 : " + rank)
+           // document.write("<hr>")
 
 
         // 학생 과락
+        //result로 몰아 넣었으면 많은 변수가 필요 없었다
+        //즉, 개 노가다를 내가 알아서 준비했다는 뜻
 
         let pass=[];
             for(let i=0; i<size; i=i+1){
@@ -97,7 +101,8 @@
             star[i]=
         }
         
-
+//result를 이용한 표만들기를 더욱 잘 확인하기
+//선생님 답안이랑 비교해서 문제점 체크하기!!!
         
         </script>
         
