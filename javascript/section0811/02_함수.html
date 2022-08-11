@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">                  
+    <head>
+        <meta charset="UTF-8">                         
+        <title>02_함수.html</title>  
+    </head> 
+    <body>
+        
+        <script>
+
+            //3. 리턴값이 있는 경우
+            //  - 함수는 호출한 시점으로 되돌아 온다(return)
+            //  - 리턴값 : 값을 가지고 호출한 시점으로 되돌아 온다
+            //  - 리턴값 : 1개만 가능하다
+            //  - 형식) return 값
+            
+            function test1() {
+                document.write("SEOUL");
+                return; //호출시점으로 되돌아 간다
+                        //맨 마지막 return은 생생략 가능하다
+            }//for end
+
+            function test2(a){
+                if(a<0) {
+                    return;
+                }
+                document.write(a);
+            }//test2 end
+
+            function test3(a, b){
+                let c=a+b;
+                return c; //c값을 리턴. 1개만 리턴할 수 있다
+            }//test3 end
+
+            ///////////////////////////////////////////////////////
+
+            test1();//함수 호출
+            test2(3); 
+            test2(-5); //음수이기 때문에 test2의 함수값 상 표현할 수 없다
+            document.write("<hr>");
+
+
+            let result = test3(6, 7);
+            document.write(result);         //변수값
+            document.write(13);             //상수값
+            document.write(test3(8, 9));    //함수의 리턴값
+            document.write("<hr>");
+
+
+            //문1) 팩토리얼값을 구하시오
+
+            //내가 푼 방법 : undefined가 나옴
+            /*
+            function fact(a){
+                let result = 1;
+                for(let i = 1; i<=a; i++){
+                    result= result*i;
+                }
+            }//for end
+            */ 
+
+            //선생님 해답
+            function fact(f){
+                let gop=1; //중괄호 안에서만 사용되는 변수
+                for(a=f; a>=1; a--){
+                    gop=gop*a;
+                }//for end
+                return gop;
+            }//fact() end
+
+            let gop=fact(4);
+            document.write(gop);
+            document.write("<hr>");
+
+            //문2) 윤년, 평년을 구하시오
+
+            function leap(a){
+                if(a%4==0 && a&100!=0 || a%400==0){
+                    return true;
+                }else{
+                    return false;
+                }//if end
+            }//leap() end
+            ////////////////////////////////////////////////////////////
+            
+            if(leap(2022)){
+                document.write("윤년");
+            }else{
+                document.write("평년");
+            }//if end
+            document.write("<hr>");
+            /////////////////////////////////////////////////////////////
+
+
+            //4. 재귀적 함수 호출
+            //-> 자신이 자신의 함수를 호출할 수 있다
+
+            document.write(test(3)); //3! 값 구하기
+
+            function test(f){
+                if(f==0){
+                    return 1;
+                }else{
+                    return f*test(f-1);
+                }//if end
+            }//test() end
+
+            /*
+                if(3==0)
+                else
+                    3*test(3-1)
+                        if(2==0)
+                        else
+                            2*test(2-1)
+                                if(1==0)
+                                else
+                                    1*test(1-1)
+                                        if(0==0)  -> 1 -> stop
+            */
+
+
+
+
+
+
+
+        </script>
+        
+    </body>                      
+</html>
