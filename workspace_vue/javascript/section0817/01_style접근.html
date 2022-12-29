@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">                  
+    <head>
+        <meta charset="UTF-8">                         
+        <title>01_style접근.html</title>  
+    </head> 
+    <body>
+
+        <h3>자바스크립트에서 스타일 접근</h3>
+        <div id="mydiv" style="position: relatibe;
+                            top: 10px;
+                            left: 20px;
+                            width: 150px;
+                            height: 70px;
+                            background-color: red;">대한민국</div>    
+        <hr>
+        <input type="button" value="nydiv의 style속성" onclick="test1()">
+        <hr>
+        <input type="button" value="nydiv의 styl변경" onclick="test2()">
+
+        <hr>
+        <img src+"button" valse="이미지변경" onclick=="test3()"
+
+
+ 
+        
+        <script>
+          function test1(){
+          //alert(document.getElementById("mydiv")); 
+        
+
+          //alert(document.getElementById("mydiv")).style);
+          순수 자바스크립트 스타일 접근
+   
+
+         //jQuery에서 스타일 접근(추천)
+         $("myscript")css(){
+
+         alert(document.getElementById("mydiv").style.top);
+         alert(document.getElementById("mydiv").style.left);
+         alert(document.getElementById("mydiv").style.width);
+         alert(document.getElementById("mydiv").style.height);
+         alert(document.getElementById("mydiv").style.backgroundCole);
+         alert(document.getElementById("mydiv").style.position);
+        } //test1() end
+
+         funtion test2(){
+            document.getElementById("mydiv").style.top="100px";
+            document.getElementById("mydiv").style.left="150px";
+            document.getElementById("mydiv").style.width="400px";
+            ocument.getElementById("mydiv").style.height="300px";
+            document.getElementById("mydiv").style.backgroundCole="green";
+            document.getElementById("mydiv").style.position="absolute";
+         }//test2() end
+
+
+         funtion
+        </script>
+    </body>                      
+</html>

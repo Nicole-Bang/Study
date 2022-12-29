@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">                  
+    <head>
+        <meta charset="UTF-8">                         
+        <title>02_조건문 연습문제.html</title>  
+    </head> 
+    <body>
+
+        <h3>조건문 연습문제</h3>
+        
+        <script>
+           //문1) 평균점수에 따라서 A,B,C,D,F학점을 출력하시오(switch문 활용)
+            let kor =100, eng=95, mat=90;
+            let aver=parseInt((kor+eng+mat)/3);
+            
+            switch(parseInt(aver/10)){
+                case 10 : 
+                case  9 : document.write("A"); break;
+                case  8 : document.write("B"); break;
+                case  7 : document.write("C"); break;
+                case  6 : document.write("D"); break;
+                default : document.write("F"); break;
+            } //switch end
+            
+            document.write("<hr>");
+
+           //문2) 연산기호(OP)에 따라 결과값을 출력하시오
+            let i=3, j=5;
+            let op="/"; //+,-,*,/
+            /*
+                출력결과
+                3+5=8
+                3-5=-2
+                3*5=15
+                3/5=0.6
+            */
+            let result=0;
+
+            switch(op){
+                case "+" : result=i+j; break;
+                case "-" : result=i-j; break;
+                case "*" : result=i*j; break;
+                case "/" : result=i/j; break;
+            }//switch end 
+            //op 변수에 따른 case를 지정한다. 이때 result 변수를 하나 더 설정하여 값을 도출
+
+            document.write(i + op + j + "=" + result);
+            document.write("<hr>");
+            /*
+            1번 문제와 다르게 케이스에서 바로 화면출력이 되는것이 아니기 때문에 
+            반드시 document.write()를 사용해야 화면상에 출력이 된다
+            */
+
+
+           //문3) 주민번호를 이용해서 나이와 성별을 출력하시오
+                //예) 주민번호 "1912301234567"
+                //-> 나이 : 올해년도 - 태어난 년도
+                //-> 성별 : 1 또는 3(홀수) 남자, 2 또는 4(짝수) 여자
+
+
+            // 태어난 년도 구하기
+            let myYear=parseInt("19");
+            let myCode=parseInt("4");
+
+            switch(myCode){
+                case 1 :
+                case 2 : myYear=myYear+1900; break;
+                case 3 :
+                case 4 : myYear=myYear+2000; break;
+            }//switch end
+
+            //나이구하기
+            myAge=2022-myYear;
+            document.write("나이 : " + myAge + "<hr>")
+            
+            //성별 구하기
+            switch(myCode%2){
+                case 0 : document.write("성별 : 여자<hr>"); break;
+                case 1 : document.write("성별 : 남자<hr>"); break;
+            }//switch end
+
+
+            //성별 if로 구하기
+
+            if(myCode==1 || myCode==3){
+                document.write("성별 : 남자<hr>");
+            }else if(myCode==2 || myCode==4){
+                document.write("성별 : 여자<hr>");
+            }//if end
+
+            //혹시 이건??
+            //if(myCode%2=0){
+                //document.write("성별 : 여자<hr>");}
+
+            //-> 안되는 걸로 ... ㅋㅋㅋㅋ
+            
+
+        
+        </script>
+        
+    </body>                      
+</html>
